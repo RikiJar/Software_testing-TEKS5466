@@ -1,12 +1,42 @@
 # Test Plan for Todo List Application
+**Authors:** Kim Järvinen and Riki Järvinen
 
-1. Let's list here what should be tested
+---
 
-    - Thing 1
-    - Thing 2
-    - Thing 3
-    - ...
+## 1. Introduction
+...
 
-2. Let's convert that as a table
+---
 
-    ...
+## 2. Environments
+...
+
+---
+
+## 3. People
+...
+
+---
+
+## 4. Tools
+...
+
+---
+
+## 5. Timescales
+...
+
+---
+
+## 6. In Scope
+...
+
+---
+
+## 7. Out of Scope
+...
+
+---
+
+## 8. Risks
+...
