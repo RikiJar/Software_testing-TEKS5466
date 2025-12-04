@@ -1,4 +1,4 @@
-# Test Plan for Todo List Application
+# Test Plan
 **Authors:** *Kim Järvinen* & *Riki Järvinen*<br>
 **Date:** *?.?.2025*
 

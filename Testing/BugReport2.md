@@ -1,4 +1,4 @@
-# Bug Report 2 for Todo List Application
+# Bug Report 2
 **Authors:** *Kim Järvinen* & *Riki Järvinen*<br>
 **Date:** *?.?.2025*
 
