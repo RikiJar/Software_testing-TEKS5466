@@ -34,7 +34,7 @@
 
 ---
 
-## 7. Attachments (Optional)
+## 7. Attachments
 ...
 
 ---
