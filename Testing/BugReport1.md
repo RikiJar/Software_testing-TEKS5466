@@ -56,7 +56,7 @@ When testing, it was reproduciable everytime with the given steps to reproduce.
 
 ## 8. Severity & Priority
 - Severity classification: *Low*
-- Priority: *P1 (Low)*
+- Priority: *P3 (Low)*
 - Explanation: *The bug can harm usability of the application if user has habit of accidentally pressing buttons* 
 ---
 
