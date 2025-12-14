@@ -36,8 +36,8 @@ def test_login_logout(page: Page):
     expect(page.get_by_role("heading", name="Welcome to Todo Manager")).to_be_visible()
 
     # Fill username and password to log in
-    page.get_by_label("Username").fill("test1")
-    page.get_by_label("Password").fill("12345678")
+    page.get_by_label("Username").fill("test1" + str(random_number))
+    page.get_by_label("Password").fill("test_password" + str(random_number))
 
     # Login and verify that user has logged in successfully
     page.get_by_role("button", name="Login").click()
@@ -56,26 +56,31 @@ def test_create_delete_todo_list(page: Page):
     expect(page.get_by_role("heading", name="Welcome to Todo Manager")).to_be_visible()
 
     # Fill username and password to log in
-    page.get_by_label("Username").fill("test1")
-    page.get_by_label("Password").fill("12345678")
+    page.get_by_label("Username").fill("test1" + str(random_number))
+    page.get_by_label("Password").fill("test_password" + str(random_number))
 
     # Login and verify that user has logged in successfully
     page.get_by_role("button", name="Login").click()
     expect(page.get_by_role("heading", name="My todo lists")).to_be_visible()
 
     # Create a new todo list
-    random_number = random.randint(1, 9999)
+    todo_name = str(random.randint(1, 9999))
     page.get_by_role("button", name="New todo list").click()
-    page.get_by_label("Name").fill("Test Todo List" + str(random_number))
-    page.get_by_label("Description").fill("Test" + str(random_number))
+    page.get_by_label("Name").fill("Test Todo List" + todo_name)
+    page.get_by_label("Description").fill("Test" + todo_name)
     page.get_by_role("button", name="Create").click()
 
     # Verify that the new todo list is created and visible
-    expect(page.get_by_text("Test" + str(random_number))).to_be_visible()
-    #region [rgba(255, 0, 0, 0.1)]
-    # # Delete the created todo list
-    # page.get_by_role("button", name="Delete Test Todo List").click()
+    expect(page.get_by_text("Test" + todo_name)).to_be_visible()
 
-    # # Verify that the todo list is deleted
-    # expect(page.get_by_text("Test Todo List")).not_to_be_visible()
-    #endregion
+    # Delete the created todo list
+    todo_row = page.locator("div.flex.flex-grow").filter(
+        has=page.locator(f"text={todo_name}")
+    )
+
+    todo_row.locator(
+        'button[icon="fluent:delete-20-regular"]'
+    ).click()
+
+    # Verify that the todo list is deleted
+    expect(page.get_by_text("Test" + todo_name)).not_to_be_visible()
