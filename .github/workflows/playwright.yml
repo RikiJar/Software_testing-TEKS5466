@@ -21,7 +21,9 @@ jobs:
     - name: Start docker services
       run: | 
         cd Application
-        docker compose up -d --wait
+        docker compose up -d
+    - name: Lets sleep
+      run: sleep 30s
     - name: Run your tests
       run: pytest --tracing=retain-on-failure
     - uses: actions/upload-artifact@v4
