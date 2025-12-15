@@ -23,7 +23,7 @@ jobs:
         cd Application
         docker compose up -d
     - name: Wait for backend to be ready
-      run: docker compose wait
+      run: docker compose wait frontend backend database database-migration --timeout 60
     - name: Run your tests
       run: pytest --tracing=retain-on-failure
     - uses: actions/upload-artifact@v4
