@@ -21,8 +21,11 @@ jobs:
     - name: Start docker services
       run: | 
         cd Application
-        docker compose up
-        pytest --tracing=retain-on-failure
+        docker compose up -d
+    - name: Wait for backend to be ready
+      run: docker compose wait
+    - name: Run your tests
+      run: pytest --tracing=retain-on-failure
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
