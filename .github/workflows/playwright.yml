@@ -19,7 +19,9 @@ jobs:
     - name: Ensure browsers are installed
       run: python -m playwright install --with-deps
     - name: Start docker services
-      run: docker compose -f ./Application up
+      run: | 
+        cd Application
+        docker compose up
     - name: Run your tests
       run: pytest --tracing=retain-on-failure
     - uses: actions/upload-artifact@v4
