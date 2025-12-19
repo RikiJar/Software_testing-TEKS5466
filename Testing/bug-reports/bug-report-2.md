@@ -49,11 +49,11 @@ The created task gets unintentionally duplicated when navigating back to the sam
 ## 7. Attachments
 A to-do list with a created task shared to 2 users:
 
-![To-do list with created task shared to 2 users](./Images/BugReport2/1.png "To-do list with created task shared to 2 users")
+![To-do list with created task shared to 2 users](./Images/bug-report-2/1.png "To-do list with created task shared to 2 users")
 
 The same to-do list when navigated back to the same page (see the duplicated task):
 
-![The same to-do list when navigated back to the same page](./Images/BugReport2/2.png "The same to-do list when navigated back to the same page")
+![The same to-do list when navigated back to the same page](./Images/bug-report-2/2.png "The same to-do list when navigated back to the same page")
 
 ---
 
