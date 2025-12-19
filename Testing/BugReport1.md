@@ -1,4 +1,4 @@
-# Bug Report 1: In todo list share option, dropbown list for role breaks when accidentally pressing keyboard,
+# Bug Report 1: In to-do list sharing option, dropdown list for role selection breaks when accidentally typing something in it
 **Authors:** *Kim Järvinen* & *Riki Järvinen*<br>
 **Date:** *11.12.2025*
 
@@ -40,12 +40,12 @@ select a role. Application stores the latest selected role for the user, even if
 ---
 
 ## 5. Expected Result
-Text-field should empty itself and allow user to use dropdown menu as intended. 
+Text field should empty itself and allow user to use dropdown menu as intended.
 
 ---
 
 ## 6. Actual Behavior
-When accidentally pressing a character on the keyboard, dropdown menu breaks and cannot be used unless application is refreshed.
+When accidentally pressing a character on the keyboard, dropdown menu breaks and cannot be used unless UI is refreshed.
 
 ---
 
@@ -56,7 +56,7 @@ When testing, it was reproduciable everytime with the given steps to reproduce.
 
 ## 8. Severity & Priority
 - Severity classification: *Low*
-- Priority: *P3 (Low)*
+- Priority: *P3 (low)*
 - Explanation: *The bug can harm usability of the application if user has habit of accidentally pressing buttons* 
 ---
 
